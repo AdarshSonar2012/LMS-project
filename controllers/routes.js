@@ -13,17 +13,7 @@ router.get('/dashboard', (req, res) => {
      res.render('dashboard',{data:mytasks});  
     });
 });
-router.get('/', (req, res) => {
-    var mytasks ;
-    tasks.find({}, (err,data) => {
-         if(err){
-             console.log(err);
-    } if (data) {
-        mytasks = data;
-    }
-     res.render('dashboard',{data:mytasks});  
-    });
-});
+
 router.get('/course1', (req, res) =>{
     res.render('course1')
 });
@@ -50,7 +40,7 @@ router.post('/update', (req, res) =>{
     const id = req.body.id;
 
     tasks.findOneAndUpdate({_id: id}, { status: true }, (err,doc) =>{
-        res.redirect('/');
+        res.redirect('/dashboard');
     });
 
 });
