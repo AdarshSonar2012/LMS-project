@@ -22,7 +22,7 @@ mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
    .catch((err) => console.log(err));
 
 
-app.use(routes);
+
 
 //register view engine
 app.set('view engine', 'ejs');
@@ -94,6 +94,6 @@ app.post('/login', async(req, res)=>{
 app.get('/profile', (req, res) =>{
   res.render('profile')
 })
-
+app.use(routes);
 
 
