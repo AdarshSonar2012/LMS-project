@@ -263,6 +263,7 @@ header #menu {
 }
 
 .about {
+  min-height: 54vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -280,6 +281,9 @@ header #menu {
   padding: 1rem 0;
 }
 
+.course{
+ min-height: 54vh;
+}
 .course .box-container {
   display: flex;
   align-items: center;
@@ -358,6 +362,7 @@ header #menu {
 }
 
 .teacher {
+  min-height: 66vh;
   text-align: center;
   background-size: cover;
   background-position: bottom;
