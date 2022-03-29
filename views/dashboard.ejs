@@ -92,18 +92,22 @@
         color: black;
         text-decoration: none;
       }
-
+      .row {
+        margin-top: 2%;
+        margin-left: 36%;
+        font-size: large;
+      }
       .text {
         margin-top: 60px;
         font-size: x-large;
         font-weight: bold;
       }
       .content {
-        padding: 5em;
-        margin: 60px auto;
+        margin: 70px auto;
         max-width: 960px;
       }
       .content-head h1 {
+        margin-top:10%;
         font-size: 5rem;
         text-align: center;
         color: rgb(39, 39, 39);
@@ -138,6 +142,10 @@
   </head>
   <body>
     <div class="container">
+    <div class="content-head">
+          <h1>Software Development</h1>
+          <h2>Course Content</h2>
+        </div>
       <div class="row">
         <div class="col-12 col-nd-6 col-lg-5">
           <form method="POST" action="/add">
@@ -164,10 +172,7 @@
       </header>
 
       <div class="content">
-        <div class="content-head">
-          <h1>Software Development</h1>
-          <h2>Course Content</h2>
-        </div>
+        
         <% for(var tasks of data ){ %>
         <form action="/delete" method="POST" class="form-inline my-3">
           <div class="div1">
